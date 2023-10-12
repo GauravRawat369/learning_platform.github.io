@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.signin-page,.login-page
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(178, 184, 232);
+}
+.signin-div,.login-div{
+    width: 30%;
+    padding: 20px;
+    background-color: white
+}
+.signin-text,.login-text
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signin-text h3,.login-text h3{
+    font-size: 25px;
+    font-weight: 500;
+    font-weight: bold;
+
+}
+.error-text{
+    color: red;
+    font-size: 15px;
+}
+.button-style{
+    background-color: rgb(102,116,204);
+}
