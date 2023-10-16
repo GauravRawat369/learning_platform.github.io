@@ -11,14 +11,22 @@ const LogIn = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [notlogin,setNotlogin] = useState("");
-  const logInpass = (e) => {
+  const [message,setMessage] = useState("");
+   const logInpass = async (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/login',{email,password})
-    .then(res => {console.log(res)
-      if(res.data === "success")
+    await axios.post('http://localhost:8000/login',{email,password})
+    .then(res => {
+      // console.log(res) 
+      console.log(message);
+      if(res.data.message === "success")
       {
         setAuthenticated(true);
         navigate('/')
+      }
+      else
+      {
+        setMessage(res.data.message)
+        message === "user not found"?setNotlogin(true) : setNotlogin(false)
       }
     
     }
@@ -63,6 +71,7 @@ const LogIn = (props) => {
           Don't have an account? <Link to="/signup">Sign up</Link>
         </p>
       </form>
+      <p className="error-text">{message}</p>
       {notlogin&&<p className="error-text">SignUp First</p>
       }
     </div>

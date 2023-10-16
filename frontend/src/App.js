@@ -4,13 +4,15 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import LogIn from "./components/Login";
 import Home from "./components/Home";
-import Products from "./components/Products";
-import Services from "./components/Services";
-import Contact from "./components/Contact";
+import Products from "./components/main routes/Products";
+import Services from "./components/main routes/Services"
+import Contact from "./components/main routes/Contact";
 import Videos from "./components/Videos";
 import Courses from "./components/Courses";
 import Privateroutes from "./components/Privateroutes";
-import jwt_decode from "jwt-decode";
+import Createpost from "./components/Createpost";
+import Postpage from "./components/Postpage";
+// import jwt_decode from "jwt-decode";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(
@@ -33,9 +35,8 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-         {/* <Route path="/courses" element={<Courses/>}/> 
-         <Route path="/videos" element={<Videos/>}/>  */}
-        
+        <Route path="/createpost" element={<Createpost/>}/>
+        <Route path="postpage/:id" element={<Postpage authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/>
       </Routes>
     </Router>
   );

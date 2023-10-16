@@ -36,3 +36,111 @@
 .button-style{
     background-color: rgb(102,116,204);
 }
+.create-post-button{
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background-color: rgb(102,116,204);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.courses-div{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.courses-div-content{
+    margin: 10px 10px;
+    width: 70%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    gap: 1.0rem;
+    /* align-items: center; */
+    /* background-color: wheat; */
+}
+
+.image-content{
+    width: 30%;
+    height: 100%;
+}
+.text-content a{
+    text-decoration: none;
+    color: #000;
+}
+.image-content img{
+    width: 100%;
+    height: 100%;
+}   
+.text-content{
+    padding: 5px 5px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    color: black;
+    
+}
+.text-content h2{
+    font-size: 25px;
+    font-weight: 500;
+    font-weight: bold;
+    
+}
+.module-text{
+    font-weight: 500;
+}
+.date-author-details p{
+    margin-right: 14px;
+    color: black;
+}
+.date-author-details span{
+    margin-left: 10px;
+}
+.postpage-main-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.postpage-content-div{
+    width: 70%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+.postpage-content-div span{
+    margin-left: 15px;
+}
+.summary-text{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0px;
+    color:rgb(81, 80, 80);
+}
+.content-text{
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0px;
+    
+}
+.postpage-content-div h1{
+    font-size: 35px;
+    font-weight: 500;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.postpage-content-div img{
+    width: 100%;
+}
