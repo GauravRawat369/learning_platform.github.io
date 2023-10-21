@@ -6,6 +6,7 @@ import 'react-quill/dist/quill.snow.css';
 import "./create.css"
 import {useNavigate } from 'react-router-dom';
 const Createpost = () => {
+    
     const navigate = useNavigate();
     const [title,setTitle] = useState("");
     const [summary,setSummary] = useState("");

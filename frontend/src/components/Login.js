@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 const LogIn = (props) => {
-  const { authenticated, setAuthenticated } = props;
+  const { authenticated, setAuthenticated,setUsertype } = props;
     const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,11 +16,12 @@ const LogIn = (props) => {
     e.preventDefault();
     await axios.post('http://localhost:8000/login',{email,password})
     .then(res => {
-      // console.log(res) 
-      console.log(message);
+      console.log(res) 
       if(res.data.message === "success")
       {
-        setAuthenticated(true);
+        setAuthenticated(true); 
+        console.log(res.data.user);
+        setUsertype(res.data.user);
         navigate('/')
       }
       else

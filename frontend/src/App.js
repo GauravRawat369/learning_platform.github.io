@@ -18,24 +18,30 @@ function App() {
   const [authenticated, setAuthenticated] = useState(
     localStorage.getItem("authenticated") === "true"
   );
+  const [usertype,setUsertype] = useState(
+    localStorage.getItem("usertype") || "user"
+  )
   useEffect(() => {
     // Save authentication state to localStorage
     localStorage.setItem("authenticated", authenticated);
+    localStorage.setItem("usertype",usertype);
   }, [authenticated]);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/>
+        <Route path="/" element={<Home authenticated={authenticated} setAuthenticated={setAuthenticated} />}/>
         <Route path="/privateroute" element = {<Privateroutes authenticated={authenticated} setAuthenticated={setAuthenticated}/>}>
-            <Route path="courses" element={<Courses authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/> 
+            <Route path="courses" element={<Courses authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype}/>}/>
+            
             <Route path="videos" element={<Videos authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/> 
         </Route>
-        <Route path="/login" element={<LogIn authenticated={authenticated} setAuthenticated={setAuthenticated}/>} />
-        <Route path="/signup" element={<SignUp authenticated={authenticated} setAuthenticated={setAuthenticated}/>} />
+        <Route path="createpost" element={<Createpost />}/> 
+        <Route path="/login" element={<LogIn authenticated={authenticated} setAuthenticated={setAuthenticated} setUsertype={setUsertype}/>} />
+        <Route path="/signup" element={<SignUp authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype}/>} />
         <Route path="/products" element={<Products />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/createpost" element={<Createpost/>}/>
+        
         <Route path="postpage/:id" element={<Postpage authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/>
       </Routes>
     </Router>

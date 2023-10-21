@@ -21,13 +21,16 @@ const Header = (props) => {
                   <Link to='/'>Home</Link>
                 </li>
                 <li>
-                {authenticated ? (<Link to='/products'>Products</Link>) : (<Link to='/login'>Products</Link>)}
+                {/* {authenticated ? (<Link to='/products'>Products</Link>) : (<Link to='/login'>Products</Link>)} */}
+                <Link to='/products'>Products</Link>
                 </li>
                 <li>
-                  {authenticated ? (<Link to='/services'>Services</Link>) : (<Link to='/login'>Services</Link>)}
+                  {/* {authenticated ? (<Link to='/services'>Services</Link>) : (<Link to='/login'>Services</Link>)} */}
+                  <Link to='/services'>Services</Link>
                 </li>
                 <li>
-                  {authenticated ? ( <Link to='/contact'>Contact</Link>) : (<Link to='/login'>Contact</Link>)}
+                  {/* {authenticated ? ( <Link to='/contact'>Contact</Link>) : (<Link to='/login'>Contact</Link>)} */}
+                  <Link to='/contact'>Contact</Link>
                 </li>
               </ul>
             </div>

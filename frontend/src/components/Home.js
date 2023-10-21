@@ -43,10 +43,20 @@ function Home(props) {
                 SDE Interviews.
               </h2>
               <div className="auth-div">
-              <button className="auth-button viewcourse-button" onClick={findCourses}>
+              {/* <Link to='/privateroute/courses'>
+              <button className="auth-button viewcourse-button" >
                 View Courses
               </button>
-              <button className="auth-button watch-video-button" onClick={findVideos}>
+              </Link>
+              <Link to='/privateroute/videos'>
+              <button className="auth-button watch-video-button" >
+                Watch Videos
+              </button> */}
+              {/* </Link> */}
+              <button className="auth-button viewcourse-button" onClick={findCourses}>
+                View Courses
+              </button> 
+               <button className="auth-button watch-video-button" onClick={findVideos}>
                 Watch Videos
               </button>
               </div>

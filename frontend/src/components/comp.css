@@ -69,7 +69,9 @@
     /* align-items: center; */
     /* background-color: wheat; */
 }
-
+#user-type{
+    width: 100%;
+}
 .image-content{
     width: 30%;
     height: 100%;
@@ -143,4 +145,10 @@
 }
 .postpage-content-div img{
     width: 100%;
+}
+.student-text{
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0px;
+    color:rgb(81, 80, 80);
 }
