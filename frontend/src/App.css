@@ -19,7 +19,7 @@
     
 }
 .navbar h2{
-    color: rgb(102,116,204);
+    color: rgb(60, 79, 199);
     font-weight: 700;
     font-size: 40px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,7 +55,7 @@
     font-weight: 700;
     font-size: 15px;
     color: #fff;
-    background-color: rgb(102,116,204);
+    background-color: rgb(143, 101, 217);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .intro-content-div{
@@ -71,6 +71,7 @@
    
 }
 .intro-image-div{
+    /* padding: 10px 10px; */
     width: 55%;
     height: 500px;
     display: flex;
@@ -83,13 +84,19 @@
     position: relative;
     animation: mymove 8s infinite ;
     animation-timing-function: linear;
+    /* animation-timing-function: ease-in-out; */
 }
-@keyframes mymove {
+/* @keyframes mymove {
     0%   {top: 30px;}
-    25%   {top: 0px}
-    50%  {top: 30px;}
+    20%  {top: 0px;}
+    40%  {top: 30px;}
+    60%  {top: 0px;}
+    80%  {top: 30px;}
     100% {top: 0px;}
-  }
+    
+} */
+
+
   .inner-intro-text-div{
     padding-top: 30px;
     margin-left: 15%;
@@ -108,13 +115,13 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   .inner-intro-text-div h1 span{
-    color: rgb(102,116,204);
+    color: rgb(60, 79, 199);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   .watch-video-button,
   .viewcourse-button {
-    padding: 20px ,20px;
     height: 50px;
     color: #fff;
   }
+  

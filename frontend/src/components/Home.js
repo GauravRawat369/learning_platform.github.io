@@ -1,6 +1,6 @@
 import react from 'react'
 import {Link} from "react-router-dom"
-import student from './images/student-v1.jpeg'
+import student from './images/student-v1.png'
 import { useNavigate} from 'react-router-dom';
 import Header from './Header';
 function Home(props) {
@@ -43,16 +43,7 @@ function Home(props) {
                 SDE Interviews.
               </h2>
               <div className="auth-div">
-              {/* <Link to='/privateroute/courses'>
-              <button className="auth-button viewcourse-button" >
-                View Courses
-              </button>
-              </Link>
-              <Link to='/privateroute/videos'>
-              <button className="auth-button watch-video-button" >
-                Watch Videos
-              </button> */}
-              {/* </Link> */}
+
               <button className="auth-button viewcourse-button" onClick={findCourses}>
                 View Courses
               </button> 

@@ -24,11 +24,12 @@
     height: 100%;
 }
 .chat-div{
+    padding: 7px 7px;
     width: 30%;
     height: 100%;
     border-width:4px;
     border-style:solid;
-    border-color:rgb(102,116,204);
+    border-color:rgb(143, 101, 217);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,6 +42,8 @@
 .chat-input-text{
     width: 100%;
     padding: 5px 5px;
+    display: flex;
+    justify-content: space-between;
 }
 .chat-input-text input
 {
@@ -58,25 +61,27 @@
     font-weight: 700;
     font-size: 13px;
     color: #fff;
-    background-color: rgb(102,116,204);
+    background-color: rgb(143, 101, 217);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .message{
     color: white;
     padding: 13px 17px;
-    line-height: 26px;
+    line-height: 20px;
+    font-weight: 600;
     font-size: 16px;
     border-radius: 7px;
     margin: 5px 5px;
     width: 60%;
-    position: relative;
+    position: relative;                                                             
 }
 .incomming-chats{
-    background-color: rgb(79, 186, 171);
+    background-color: rgb(231,231,236);
+    color: #000;
     float: left;
 }
 .outcomming-chats{
-    background-color: rgb(130, 202, 67);
+    background-color: rgb(54,47,115);
     float: right;
 }
 .chat-messages{
