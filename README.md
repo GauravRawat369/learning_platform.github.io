@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-![Project Structure](LearningPlatform.jpg)
-=======
-![Project Structure](https://github.com/GauravRawat369/learning_platform/frontend/src/components/images/LearningPlatform.jpg)
 
->>>>>>> 4194cdd5615109d51fa290491ffd9060afdec4f3
+![Project Structure](LearningPlatform.jpg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
