@@ -1,4 +1,4 @@
-![Project Structure](https://github.com/GauravRawat369/learning_platform/frontend\src\components\images\LearningPlatform.jpg?raw=true)
+![Project Structure](https://github.com/GauravRawat369/learning_platform/frontend/src/components/images/LearningPlatform.jpg)
 
 # Getting Started with Create React App
 
