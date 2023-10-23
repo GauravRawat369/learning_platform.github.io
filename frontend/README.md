@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![Project Structure](https://github.com/GauravRawat369/learning_platform/frontend\src\components\images\LearningPlatform.jpg?raw=true)
+=======
+![alt text](https://github.com/GauravRawat369/learning_platform/frontend\src\components\images\LearningPlatform.jpg?raw=true)
+>>>>>>> bb433cc9c87be9db156e5c949553d53352d3aacc
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
