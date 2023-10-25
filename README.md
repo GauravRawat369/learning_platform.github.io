@@ -1,10 +1,5 @@
-
 ![Project Structure](LearningPlatform.jpg)
-
-<<<<<<< HEAD:README.md
-
-=======
->>>>>>> b9ade611212f95260e89dda29ee592c4a418a28a:frontend/README.md
+![Project Home page](learninig_platform_home.jpg)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
