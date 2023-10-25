@@ -1,10 +1,7 @@
 ![Project Structure](LearningPlatform.jpg)
-<<<<<<< HEAD
+
 ![Project Home page](learninig_platform_home.jpg)
-=======
 
-
->>>>>>> 87a485e283f5524bd39b4a69ad3830650daacae7
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
