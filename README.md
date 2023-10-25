@@ -1,6 +1,6 @@
 ![Project Structure](LearningPlatform.jpg)
 
-![Project Home page](learninig_platform_home.jpg)
+![Project Home page](learninig_platform_home.png)
 
 # Getting Started with Create React App
 
