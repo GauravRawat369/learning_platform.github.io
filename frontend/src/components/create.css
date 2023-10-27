@@ -20,6 +20,9 @@
     padding: 10px 10px;
 }
 .other-content-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70%;
     height: 100%;
 }

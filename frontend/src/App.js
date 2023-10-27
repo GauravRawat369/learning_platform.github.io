@@ -21,10 +21,14 @@ function App() {
   const [usertype,setUsertype] = useState(
     localStorage.getItem("usertype") || "user"
   )
+  const [username ,setUsername] = useState(
+    localStorage.getItem("username") || "name"
+   )
   useEffect(() => {
     // Save authentication state to localStorage
     localStorage.setItem("authenticated", authenticated);
     localStorage.setItem("usertype",usertype);
+    localStorage.setItem("username",username);
   }, [authenticated]);
   return (
     <Router>
@@ -33,11 +37,11 @@ function App() {
         <Route path="/privateroute" element = {<Privateroutes authenticated={authenticated} setAuthenticated={setAuthenticated}/>}>
             <Route path="courses" element={<Courses authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype}/>}/>
             
-            <Route path="videos" element={<Videos authenticated={authenticated} setAuthenticated={setAuthenticated}/>}/> 
+            <Route path="videos" element={<Videos authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} username = {username}/>}/> 
         </Route>
         <Route path="createpost" element={<Createpost />}/> 
-        <Route path="/login" element={<LogIn authenticated={authenticated} setAuthenticated={setAuthenticated} setUsertype={setUsertype}/>} />
-        <Route path="/signup" element={<SignUp authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype}/>} />
+        <Route path="/login" element={<LogIn authenticated={authenticated} setAuthenticated={setAuthenticated} setUsertype={setUsertype} setUsername={setUsername}/>} />
+        <Route path="/signup" element={<SignUp authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype} username={username} setUsername={setUsername}/>} />
         <Route path="/products" element={<Products />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />

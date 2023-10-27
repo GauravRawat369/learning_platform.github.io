@@ -15,15 +15,8 @@ const Courses= (props) =>{
                 setPost(post);
             })
         })
-        
-    },[])
-    // useEffect(() =>{
-    //     fetch('http://localhost:8000/username').then(res =>{
-    //         res.json().then(user=>{
-    //             console.log(user)
-    //         })
-    //     })
-    // },[])
+    })
+   
     return(
         <div>
         <Header authenticated={authenticated} setAuthenticated={setAuthenticated}/>

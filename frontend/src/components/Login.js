@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 const LogIn = (props) => {
-  const { authenticated, setAuthenticated,setUsertype } = props;
+  const { authenticated, setAuthenticated,setUsertype ,setUsername} = props;
     const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,6 +22,7 @@ const LogIn = (props) => {
         setAuthenticated(true); 
         console.log(res.data.user);
         setUsertype(res.data.user);
+        setUsername(res.data.username);
         navigate('/')
       }
       else

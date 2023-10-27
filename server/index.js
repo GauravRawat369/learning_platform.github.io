@@ -16,10 +16,12 @@ const io = socketIo(server);
 mongoose.connect("mongodb://127.0.0.1:27017/User"); //mongodb connection
 
 io.on("connection", (socket) => {
-  console.log(`user is  connected,${socket.id}`);
-  socket.on("message", (message) => {
-    console.log(message);
-    const username = "someUsername"; // Replace this with actual username logic
+  console.log(`User is connected, ${socket.id}`);
+  
+  socket.on("message", (data) => {
+    const { username, message } = data; // Extract username and message from data object
+    console.log(`Received message from ${username}: ${message}`);
+    
     ChatMessage.create({
       username: username,
       socketid: socket.id,
@@ -33,10 +35,12 @@ io.on("connection", (socket) => {
         console.error("Error saving message:", error);
       });
   });
+  
   socket.on("disconnect", () => {
-    console.log("User disconnected", socket.id);
+    console.log(`User disconnected, ${socket.id}`);
   });
 });
+
 io.on("error", (err) => {
   console.error("Socket.io error: " + err);
 });

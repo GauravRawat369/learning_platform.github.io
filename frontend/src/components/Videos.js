@@ -10,7 +10,7 @@ const socket = io("http://localhost:5000", {
 });
 
 const Videos = (props) => {
-  const { authenticated, setAuthenticated } = props;
+  const { authenticated, setAuthenticated,username } = props;
   const [messages, setMessages] = useState([]);
   const [messageInput, setMessageInput] = useState("");
   const [ourid, setOurid] = useState(() => {
@@ -36,6 +36,7 @@ const Videos = (props) => {
     fetch("http://localhost:5000/api/messages")
       .then((response) => response.json())
       .then((data) => {
+        // console.log(data);
         setMessages(data); // Set the retrieved messages in the state
       })
       .catch((error) => {
@@ -45,8 +46,11 @@ const Videos = (props) => {
 
   const textSubmit = () => {
     if (messageInput.trim() !== "") {
-      // Send message to the server
-      socket.emit("message", messageInput);
+      // Send message and username to the server
+      socket.emit("message", {
+        username: username, // Replace with the actual username variable
+        message: messageInput,
+      });
       setMessageInput("");
     }
   };
@@ -69,6 +73,7 @@ const Videos = (props) => {
 
             return (
                 <div key={index} className={`${messageClass} message`}>
+                  {message.username} {"   "}:{"  "}
                 {message.message}
                 </div>
             );

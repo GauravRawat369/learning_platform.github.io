@@ -6,11 +6,11 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
-  const { authenticated, setAuthenticated, usertype, setUsertype } = props;
+  const { authenticated, setAuthenticated, usertype, setUsertype,username,setUsername } = props;
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
+  // const [username, setUsername] = useState("");
   const signup = (e) => {
     e.preventDefault();
     // console.log(user);

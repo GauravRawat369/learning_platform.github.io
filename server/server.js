@@ -23,7 +23,7 @@ app.post('/signup',(req,res)=>{
 // app.get('/username',(req,res) =>{
 //     //only send username
 //     UserModel.find().select('username')
-//     .then(user => res.json(user))
+//     .then(user => res.json(user) )
 //     .catch(err => res.json(err))
 // })
 app.post('/login',(req,res) =>{
@@ -33,7 +33,7 @@ app.post('/login',(req,res) =>{
         if(user)
         {
             const passcheck = bcrypt.compareSync(password,user.password)
-            passcheck ? res.json({message: "success",user:user.usertype}): res.json({message: "wrong pass"})
+            passcheck ? res.json({message: "success",user:user.usertype,username : user.username}): res.json({message: "wrong pass"})
         }
         else
         {
