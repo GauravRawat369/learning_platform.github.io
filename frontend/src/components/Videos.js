@@ -4,6 +4,7 @@ import Header from "./Header";
 import "./create.css";
 import io from "socket.io-client";
 import ScrollToBottom from "react-scroll-to-bottom";
+import LiveStream from "./LiveStream";
 
 const socket = io("http://localhost:5000", {
   transports: ["websocket"],
@@ -63,10 +64,12 @@ const Videos = (props) => {
         setAuthenticated={setAuthenticated}
       />
       <div className="video-content-div">
-        <div className="other-content-div"></div>
+        <div className="other-content-div">
+          <LiveStream />
+        </div>
         <div className="chat-div">
           <ScrollToBottom className="user-chat-text chat-messages">
-            {console.log(messages)}
+            {/* {console.log(messages)} */}
             {messages.map((message, index) => {
             const isOutgoingMessage = ourid.includes(message.socketid);
             const messageClass = isOutgoingMessage ? "outcomming-chats" : "incomming-chats";

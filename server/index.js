@@ -20,7 +20,7 @@ io.on("connection", (socket) => {
   
   socket.on("message", (data) => {
     const { username, message } = data; // Extract username and message from data object
-    console.log(`Received message from ${username}: ${message}`);
+    // console.log(`Received message from ${username}: ${message}`);
     
     ChatMessage.create({
       username: username,
@@ -59,5 +59,5 @@ app.get("/api/messages", (req, res) => {
 
 const port = 5000;
 server.listen(port, () => {
-  console.log(`server is running on port ${port}`);
+  // console.log(`server is running on port ${port}`);
 });
