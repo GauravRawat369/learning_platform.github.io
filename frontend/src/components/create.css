@@ -28,28 +28,33 @@
 }
 .other-content-input-div{
     padding: 7px 7px;
-    width: 80%;
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+}
+.video-config{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* background-color: aqua; */
+}
+.inputandbutton-div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.other-content-input-div video{
-    margin: 5px 5px;
-    width: 58%;
-    height: 200px;
-    border-color:rgb(143, 101, 217);
-    border-width:4px;
-    border-style:solid;
-    object-fit: cover; 
-}
+    width: 100%;
+    height: 100%;
 
+}
 .other-content-input-div input{
     border-color:rgb(143, 101, 217);
     border-width:4px;
     border-style:solid;
     width: 58%;
+    margin: 5px 5px;
 }
 .other-content-input-div button{
     margin: 5px 5px;
@@ -61,9 +66,24 @@
     font-weight: 700;
     font-size: 15px;
     color: #fff;
-    width: 58%;
+    width: 58%
 }
 
+.Bigger-video-div{
+    border-color:rgb(143, 101, 217);
+    border-width:4px;
+    border-style:solid;
+    height: 500px;
+    width: 100%;  
+}
+.Smaller-video-div{
+    position: absolute;
+    border-color:rgb(143, 101, 217);
+    border-width:4px;
+    border-style:solid;
+    height: 150px;
+    width: 20%;
+}
 .chat-div{
     padding: 7px 7px;
     width: 30%;

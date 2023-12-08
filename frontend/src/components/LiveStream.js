@@ -7,6 +7,8 @@ const LiveStream = () => {
   const [peerid,setPeerid] = useState("");
   const [otherpeerid,setOtherpeerid] = useState("");
   const peerInstance = useRef(null);
+  const [bigvideoclass,setBigvideoclass] = useState("Bigger-video-div");
+  const [smallvideoclass,setSmallvideoclass] = useState("Smaller-video-div");
   useEffect(() => {
     var peer = new Peer();
 
@@ -45,13 +47,24 @@ const LiveStream = () => {
       },
     );
   };
+  const changeClassname = () =>{
+    setBigvideoclass(smallvideoclass)
+    setSmallvideoclass(bigvideoclass)
 
+  }
   return (
     <div className="other-content-input-div">
+            <div className="inputandbutton-div" >
             <input className= "input"type="text" onChange={e => setOtherpeerid(e.target.value)}/>
-            <button onClick={Call}>Call</button>
-            <video ref={otherUserRef} autoPlay/>
-            <video ref={remoteUserRef} autoPlay />
+                <button onClick={Call}>Call</button>
+            </div>
+            <div className={bigvideoclass} >
+            <video className="video-config" ref={otherUserRef} autoPlay/>
+            </div>
+            <div className={smallvideoclass} onClick={changeClassname}>
+              <video className="video-config" ref={remoteUserRef} autoPlay/>
+            </div>
+          
     </div>
   );
 };
