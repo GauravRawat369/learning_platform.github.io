@@ -1,10 +1,10 @@
+require('dotenv').config()
 const express = require("express");
 const http = require("http");
 const socketIo = require("socket.io");
 const mongoose = require("mongoose");
 const ChatMessage = require("./Models/Chatmessage.js");
-// const session = require('express-session');
-// const MongoDBStore = require('connect-mongodb-session')(session);
+
 
 const app = express();
 const cors = require("cors");
@@ -13,7 +13,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = socketIo(server);
 // Database connection
-mongoose.connect("mongodb://127.0.0.1:27017/User"); //mongodb connection
+mongoose.connect(process.env.MONGO_URL_USER); //mongodb connection
 
 io.on("connection", (socket) => {
   console.log(`User is connected, ${socket.id}`);
@@ -57,7 +57,7 @@ app.get("/api/messages", (req, res) => {
     });
 });
 
-const port = 5000;
+const port = process.env.PORT_2 || 5000;
 server.listen(port, () => {
   // console.log(`server is running on port ${port}`);
 });

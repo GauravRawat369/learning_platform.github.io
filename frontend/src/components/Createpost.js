@@ -5,9 +5,9 @@ import { useState } from 'react';
 import 'react-quill/dist/quill.snow.css';
 import "./create.css"
 import {useNavigate } from 'react-router-dom';
-const Createpost = () => {
-    
+const Createpost = (props) => {
     const navigate = useNavigate();
+    const{username} = props;
     const [title,setTitle] = useState("");
     const [summary,setSummary] = useState("");
     const [content,setContent] = useState("");
@@ -35,6 +35,7 @@ const Createpost = () => {
             // console.log(filevalue[0])
             e.preventDefault();
             const formdata = new FormData();
+            formdata.append("blogwriter",username);
             formdata.append("title",title);
             formdata.append("summary",summary);
             formdata.append("content",content);

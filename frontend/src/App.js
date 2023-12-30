@@ -39,7 +39,7 @@ function App() {
             
             <Route path="videos" element={<Videos authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} username = {username}/>}/> 
         </Route>
-        <Route path="createpost" element={<Createpost />}/> 
+        <Route path="createpost" element={<Createpost username = {username}/>}/> 
         <Route path="/login" element={<LogIn authenticated={authenticated} setAuthenticated={setAuthenticated} setUsertype={setUsertype} setUsername={setUsername}/>} />
         <Route path="/signup" element={<SignUp authenticated={authenticated} setAuthenticated={setAuthenticated} usertype = {usertype} setUsertype={setUsertype} username={username} setUsername={setUsername}/>} />
         <Route path="/products" element={<Products />} />

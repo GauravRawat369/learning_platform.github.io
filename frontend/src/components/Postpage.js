@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import './comp.css'
 
 const Postpage = (props) => {
-    const { authenticated, setAuthenticated } = props;
+    const {authenticated, setAuthenticated } = props;
     const [ postinfo,setPostinfo] = useState("");
     const {id} = useParams();
     useEffect(()=>{
@@ -20,7 +20,7 @@ const Postpage = (props) => {
         <div className='postpage-main-div'>
             <div className='postpage-content-div'>
                 <h1>{postinfo?.title}</h1>
-                <p>Gaurav Rawat <span>{new Date(postinfo?.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span> </p>
+                <p>{postinfo?.blogwriter}<span>{new Date(postinfo?.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span> </p>
                 
                 <p className='summary-text'>{postinfo?.summary}</p>
                 <img src={'http://localhost:8000/'+postinfo.coverimg} alt="" />
