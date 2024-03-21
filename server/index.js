@@ -39,6 +39,11 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log(`User disconnected, ${socket.id}`);
   });
+
+  socket.on("video", (data) => {
+    const {peerid} = data;
+    socket.broadcast.emit("video", peerid);
+  });
 });
 
 io.on("error", (err) => {
@@ -59,5 +64,5 @@ app.get("/api/messages", (req, res) => {
 
 const port = process.env.PORT_2 || 5000;
 server.listen(port, () => {
-  // console.log(`server is running on port ${port}`);
+  console.log(`server is running on port ${port}`);
 });
