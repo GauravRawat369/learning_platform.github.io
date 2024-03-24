@@ -13,6 +13,7 @@ const LiveStream = () => {
   const peerInstance = useRef(null);
   const [bigvideoclass,setBigvideoclass] = useState("Bigger-video-div");
   const [smallvideoclass,setSmallvideoclass] = useState("Smaller-video-div");
+  const [calllive,setCalllive] = useState(false);
   useEffect(() => {
     socket.on("video", (peerid) => {
       setOtherpeerid(peerid);
@@ -30,6 +31,7 @@ const LiveStream = () => {
         setPeerid(id);
     });
     peer.on("call", (call) => {
+        setCalllive(true)
         var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
         getUserMedia({ video: true },(stream) => {
             otherUserRef.current.srcObject = stream;
@@ -51,6 +53,7 @@ const LiveStream = () => {
   });
   const Call = () => {
     var getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    setCalllive(true);
     getUserMedia({ video: true},(stream) => {
         otherUserRef.current.srcObject = stream;
         otherUserRef.current.play();
@@ -74,16 +77,17 @@ const LiveStream = () => {
               <input className= "input" type="text" value={otherpeerid} />
                   <button onClick={Call}>Call</button>
             </div>
-            <div className={bigvideoclass} >
-            <video className="video-config" ref={otherUserRef} autoPlay/>
-            </div>
-            <div className={smallvideoclass} onClick={changeClassname}>
-              <video className="video-config" ref={remoteUserRef} autoPlay/>
-            </div>
-          
+
+              {calllive&&(<><div className={bigvideoclass}>
+                <video className="video-config" ref={otherUserRef} autoPlay />
+              </div>
+              <div className={smallvideoclass} onClick={changeClassname}>
+                <video className="video-config" ref={remoteUserRef} autoPlay />
+              </div>
+              </>)}
+
     </div>
   );
 };
 
 export default LiveStream;
-

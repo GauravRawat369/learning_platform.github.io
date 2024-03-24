@@ -58,7 +58,9 @@ const Videos = (props) => {
 
   //   ourid.length?console.log("This is our id",ourid):console.log("")
   return (
-    <div>
+    <div style={{
+      backgroundColor: "black",
+    }}>
       <Header
         authenticated={authenticated}
         setAuthenticated={setAuthenticated}
